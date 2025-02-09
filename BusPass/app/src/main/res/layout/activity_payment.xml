@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment"
+    android:background="@drawable/wb_bg">
+
+    <TextView
+        android:id="@+id/tv_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Payment Method"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment_method"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit/Debit Card"/>
+
+        <RadioButton
+            android:id="@+id/rb_upi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPI"/>
+    </RadioGroup>
+
+    <!-- Card Payment Input Fields -->
+    <EditText
+        android:id="@+id/et_name_on_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name on Card"
+        app:layout_constraintTop_toBottomOf="@+id/rg_payment_method"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/et_card_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Card Number"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/et_name_on_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_security_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Security Code"
+        android:inputType="numberPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_card_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_expiration_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Expiration Date (MM/YY)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/et_security_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- UPI Payment Input Field -->
+    <EditText
+        android:id="@+id/et_upi_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter UPI ID"
+        app:layout_constraintTop_toBottomOf="@+id/rg_payment_method"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btn_confirm_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Payment"
+        app:layout_constraintTop_toBottomOf="@+id/et_expiration_date"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/button_color"
+        android:fontFamily="sans-serif-medium"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

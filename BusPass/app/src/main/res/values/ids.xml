@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="profile_image" type="id" />
+    <item name="tv_cct" type="id" />
+    <item name="tv_name" type="id" />
+    <item name="et_name" type="id" />
+    <item name="tv_gender" type="id" />
+    <item name="rg_gender" type="id" />
+    <item name="rb_male" type="id" />
+    <item name="rb_female" type="id" />
+    <item name="rb_other" type="id" />
+    <item name="tv_contact" type="id" />
+    <item name="et_contact" type="id" />
+    <item name="tv_category" type="id" />
+    <item name="rg_category" type="id" />
+    <item name="rb_student" type="id" />
+    <item name="rb_employee" type="id" />
+    <item name="tv_source" type="id" />
+    <item name="et_source" type="id" />
+    <item name="tv_destination" type="id" />
+    <item name="et_destination" type="id" />
+    <item name="button1" type="id" />
+</resources>
